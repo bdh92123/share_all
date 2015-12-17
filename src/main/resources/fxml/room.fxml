@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="882.0" scaleShape="false" styleClass="root" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <AnchorPane fx:id="userListPane" minWidth="-Infinity" prefHeight="693.0" prefWidth="269.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fx:id="userListIcon" fitHeight="49.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="userListLabel" text="사용자 목록" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="userListView" fixedCellSize="70.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Label fx:id="roomTitle" alignment="CENTER" prefHeight="70.0" prefWidth="338.0" text="방 이름" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="60.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="exitButton" fitHeight="64.0" fitWidth="64.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
+                     <StackPane.margin>
+                        <Insets right="20.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <SplitPane centerShape="false" dividerPositions="0.6425470332850941" orientation="VERTICAL" scaleShape="false" BorderPane.alignment="CENTER">
+         <items>
+            <TabPane fx:id="tabPane" centerShape="false" prefHeight="258.0" prefWidth="673.0" scaleShape="false" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="canvasTab">
+                  <content>
+                    <AnchorPane centerShape="false" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" scaleShape="false">
+                           <children>
+                              <VBox centerShape="false" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ToolBar fx:id="drawingToolbar" maxHeight="56.0" minHeight="-Infinity" prefHeight="56.0" prefWidth="652.0">
+                                       <items>
+                                          <ToggleButton fx:id="moveButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClick">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="paintTool" />
+                                             </toggleGroup>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="pencilButton" mnemonicParsing="false" onAction="#onClick" toggleGroup="$paintTool">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="brushButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClick" toggleGroup="$paintTool">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="lineButton" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClick" toggleGroup="$paintTool">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="rectButton" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClick" toggleGroup="$paintTool">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </ToggleButton>
+                                          <ToggleButton fx:id="ellipseButton" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClick" toggleGroup="$paintTool">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </ToggleButton>
+                                          <Button fx:id="undoButton" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="34.0">
+                                             <graphic>
+                                                <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </Button>
+                                          <Pane prefWidth="10.0" />
+                                          <ColorPicker fx:id="majorColorPicker" prefHeight="26.0" prefWidth="46.0" />
+                                          <ColorPicker fx:id="minorColorPicker" prefHeight="26.0" prefWidth="46.0" />
+                                          <ComboBox fx:id="strokeWidthBox" prefHeight="26.0" prefWidth="67.0" />
+                                          <Separator orientation="VERTICAL" prefHeight="46.0" prefWidth="20.0" />
+                                          <CheckBox fx:id="fillCheck" mnemonicParsing="false" text="채우기" />
+                                       </items>
+                                    </ToolBar>
+                                    <ScrollPane fx:id="canvasScrollPane" hbarPolicy="NEVER" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                                       <content>
+                                          <HBox alignment="CENTER" fillHeight="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="313.0" minWidth="607.0" prefHeight="313.0" prefWidth="607.0">
+                                             <children>
+                                                <Pane fx:id="canvasPane" minHeight="296.0" prefHeight="296.0" prefWidth="554.0" />
+                                             </children>
+                                          </HBox>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView fx:id="canvasImage" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                </Tab>
+                <Tab fx:id="musicTab">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ToolBar maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="56.0" prefWidth="652.0">
+                                      <items>
+                                        <Button fx:id="musicAddButton" mnemonicParsing="false" onAction="#onClick" styleClass="add">
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic></Button>
+                                          <Button fx:id="musicRemoveButton" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#onClick" styleClass="remove">
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#onClick" styleClass="open">
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </Button>
+                                      </items>
+                                    </ToolBar>
+                                    <ListView fx:id="musicListView" fixedCellSize="58.0" prefHeight="271.0" prefWidth="652.0" VBox.vgrow="ALWAYS" />
+                                    <HBox fx:id="musicBar" alignment="CENTER_LEFT" maxHeight="68.0" minHeight="56.0" prefHeight="35.0" prefWidth="652.0">
+                                       <children>
+                                          <StackPane alignment="CENTER_LEFT" prefHeight="35.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <ProgressBar fx:id="playingProgressBar" prefHeight="36.0" prefWidth="407.0" progress="0.7" />
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0">
+                                                   <children>
+                                                      <Label fx:id="playingLabel">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                                      <StackPane minWidth="114.0" prefHeight="56.0" prefWidth="114.0">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <Label fx:id="playTimeLabel" text="00:00 / 00:00" />
+                                                         </children>
+                                                      </StackPane>
+                                                      <ImageView fx:id="playingIcon" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </HBox>
+                                                <Slider fx:id="playSlider" prefHeight="35.0" prefWidth="403.0" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </StackPane>
+                                          <HBox alignment="CENTER" minWidth="198.0" prefHeight="56.0" prefWidth="198.0">
+                                             <children>
+                                                <ImageView fx:id="prevButton" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <ImageView fx:id="playButton" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <ImageView fx:id="nextButton" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="imageTab">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ToolBar fx:id="imageToolbar" minHeight="-Infinity" prefHeight="56.0">
+                                      <items>
+                                          <Button fx:id="imageAddButton" mnemonicParsing="false" onAction="#onClick" styleClass="add">
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="captureButton" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" onAction="#onClick" >
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="imageRemoveButton" mnemonicParsing="false" onAction="#onClick" styleClass="remove">
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                          </Button>
+                                          <Button layoutX="56.0" layoutY="12.0" mnemonicParsing="false" onAction="#onClick" styleClass="open">
+                                             <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="open" />
+                                             </graphic>
+                                          </Button>
+                                      </items>
+                                    </ToolBar>
+                                    <SplitPane fx:id="imageSplitPane" dividerPositions="0.4630541871921182" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                      <items>
+                                        <AnchorPane fx:id="imageListPane" minHeight="0.0" minWidth="266.0" prefHeight="160.0" prefWidth="277.0">
+                                             <children>
+                                                <ListView fx:id="imageListView" fixedCellSize="58.0" layoutX="-7.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <ScrollPane fx:id="imagePane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="NEVER">
+                                             <content>
+                                                <VBox alignment="CENTER">
+                                                   <children>
+                                                      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" onMouseDragged="#onImageDragged" onMousePressed="#onImagePressed" pickOnBounds="true" preserveRatio="true" />
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="fileTab">
+                     <content>
+                        <VBox>
+                           <children>
+                              <ToolBar minHeight="-Infinity" prefHeight="56.0">
+                                <items>
+                                    <Button fx:id="fileAddButton" mnemonicParsing="false" onAction="#onClick" styleClass="add">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="fileRemoveButton" mnemonicParsing="false" onAction="#onClick" styleClass="remove">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#onClick" styleClass="open">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                </items>
+                              </ToolBar>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ListView fx:id="fileListView" fixedCellSize="58.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <VBox fx:id="chatPane">
+               <children>
+                  <TextArea fx:id="chatArea" editable="false" prefWidth="673.0" text="&#10;" VBox.vgrow="ALWAYS" />
+                  <StackPane alignment="CENTER_RIGHT">
+                     <children>
+                        <TextField fx:id="messageField" onAction="#onSend" prefHeight="30.0" />
+                        <ImageView fx:id="messageIcon" fitHeight="16.0" fitWidth="16.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
+                           <StackPane.margin>
+                              <Insets right="5.0" />
+                           </StackPane.margin>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </items>
+      </SplitPane>
+   </center>
+   <stylesheets>
+      <URL value="@../css/base.css" />
+      <URL value="@../css/room.css" />
+   </stylesheets>
+</BorderPane>

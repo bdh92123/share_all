@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="372.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+	<stylesheets>
+		<URL value="@../css/base.css" />
+		<URL value="@../css/dialog.css" />
+	</stylesheets>
+   <center>
+      <VBox fx:id="bodyPanel" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="64.0" prefWidth="312.0">
+               <children>
+                  <Label fx:id="message" prefHeight="64.0" prefWidth="312.0" text="메세지입니다. 계속하시겠습니까?" wrapText="true" />
+               </children>
+            </Pane>
+            <TextField fx:id="inputField" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox fx:id="buttonPanel" alignment="CENTER" prefHeight="46.0" prefWidth="388.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#onClick" prefHeight="32.0" prefWidth="60.0" text="확인">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onClick" prefHeight="32.0" prefWidth="60.0" text="취소" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox fx:id="titlePane" alignment="CENTER" prefHeight="54.0" prefWidth="408.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" text="딩동" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <ImageView fx:id="closeButton" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" />
+   </padding>
+</BorderPane>

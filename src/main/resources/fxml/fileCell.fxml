@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="261.0" stylesheets="@../css/fileCell.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="fileIcon" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="IMAGE">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </ImageView>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="fileUserTime" text="bdh921yhyyy23, 오후11시 36분" />
+            <Label fx:id="fileName" text="MyFile.zip">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="fileSize" text="1.8 MB" />
+         </children>
+         <HBox.margin>
+            <Insets left="15.0" right="10.0" />
+         </HBox.margin>
+      </VBox>
+      <StackPane>
+         <children>
+            <ProgressIndicator fx:id="progressIndicator" prefHeight="58.0" prefWidth="43.0" progress="0.69" visible="false">
+               <StackPane.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </StackPane.margin>
+            </ProgressIndicator>
+            <ImageView fx:id="downPlayingIcon" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true" styleClass="checked" />
+         </children>
+      </StackPane>
+   </children>
+</HBox>

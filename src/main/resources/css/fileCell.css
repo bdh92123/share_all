@@ -1,0 +1,24 @@
+
+
+#fileIcon.FILE {
+	-fx-image : url(../img/file_icon_64.png);
+}
+#fileIcon.MUSIC {
+	-fx-image : url(../img/music_icon_64.png);
+}
+#fileIcon.IMAGE {
+	-fx-image : url(../img/picture_icon_64.png);
+}
+#downPlayingIcon.playing {
+	-fx-image : url(../img/play_bar_icon_32.png);
+}
+#downPlayingIcon.playing:hover {
+	-fx-cursor: pointer;
+	-fx-effect: innershadow(gaussian, skyblue, 10 , 1 , 0 , 0);
+}
+#downPlayingIcon.down {
+	-fx-image : url(../img/download_icon_32.png);
+}
+#downPlayingIcon.down:hover {
+	-fx-effect: innershadow(gaussian, skyblue, 10 , 1 , 0 , 0);
+}

@@ -1,0 +1,21 @@
+.root {
+	
+}
+
+#refreshButton  {
+	-fx-image: url(../img/refresh_icon_64.png);
+}
+#refreshButton:pressed {
+	-fx-image: url(../img/refresh_icon_64.png);
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+#createRoomButton {
+	-fx-image: url(../img/add_room_button_64.png);
+}
+#createRoomButton:pressed {
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+
+#titleImage {
+	-fx-image: url(../img/room_list_64.png);
+}

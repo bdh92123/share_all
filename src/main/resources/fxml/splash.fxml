@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="splashPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="476.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+      <URL value="@../css/base.css" />
+      <URL value="@../css/splash.css" />
+   </stylesheets>
+</Pane>

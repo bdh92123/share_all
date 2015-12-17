@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="261.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="roomNumber" style="-fx-text-fill: #45c8dc;" text="1">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </Label>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="roomTitle" style="-fx-text-fill: #888895;" text="roomTitle">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <HBox.margin>
+            <Insets left="15.0" right="10.0" />
+         </HBox.margin>
+      </VBox>
+      <StackPane>
+         <children>
+            <ImageView fx:id="enterButton" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="checked">
+               <image>
+                  <Image url="@../img/enter_room_icon_32.png" />
+               </image></ImageView>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets right="10.0" />
+   </padding>
+</HBox>

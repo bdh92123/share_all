@@ -1,0 +1,25 @@
+#userIcon.hear {
+	-fx-image: url(../img/eye.png);
+}
+
+#userIcon.me {
+	-fx-image: url(../img/eye.png);
+	-fx-opacity: 0.1;
+}
+
+#userIcon.me:hover {
+	-fx-image: url(../img/eye.png);
+	-fx-opacity: 0.3;
+}
+
+#userIcon.master {
+	-fx-image: url(../img/crown.png);
+}
+
+#userItem {
+	-fx-background-color: #E4F6F9;
+	-fx-background-radius: 10;
+}
+Label {
+	-fx-text-fill: #8EBDC4;
+}

@@ -1,0 +1,21 @@
+.root {
+	-fx-background-color: #3FB4C6;
+	-fx-border-width: 3;
+	-fx-border-color: #125A65;
+}
+#titlePane Label {
+	-fx-text-fill: white;
+	-fx-font-size: 1.5em;
+}
+#closeButton {
+	-fx-image: url(../img/msg_close_32.png);
+}
+#bodyPanel {
+		-fx-background-color: #fff;
+}
+#buttonPanel {
+	-fx-background-color: #efefef;
+}
+#message {
+	-fx-text-fill: gray;
+}

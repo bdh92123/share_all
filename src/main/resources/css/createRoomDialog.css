@@ -1,0 +1,20 @@
+.root {
+	-fx-background-color: transparent;
+	-fx-focus-color: #3FB4C6;
+	-fx-border-width: 3;
+	-fx-border-color: #125A65;
+}
+Label {
+	-fx-text-fill: gray;
+	-fx-font-weight: bold;
+}
+#titlePane {
+	-fx-background-color: #3FB4C6;
+}
+
+#titleIcon {
+	-fx-image: url(../img/room_icon_64.png);
+}
+#closeButton {
+	-fx-image: url(../img/msg_close_32.png);
+}

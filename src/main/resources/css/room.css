@@ -1,0 +1,264 @@
+.root {
+	-fx-background-color: #45C8DC;
+}
+#roomTitle {
+	-fx-text-fill: white;
+	-fx-font-size: 3em;	
+}
+.tab-pane {
+    -fx-tab-min-height: 60;
+    -fx-tab-max-height: 60;
+}
+.tab-header-area {
+	-fx-padding: 0.416667em 0.166667em 0.0em 0.0em; 
+}
+.tab-header-background {
+	-fx-background-color: #272A33;
+}
+.tab{
+	-fx-background-color: #272A33;
+	-fx-pref-width: 100;
+}
+.tab:selected{
+	-fx-background-color: #3F424A;
+	-fx-border: 0;
+}
+#chatPane {
+	-fx-background-color: #3F424A;
+}
+#musicBar {
+	-fx-background-color: #3F424A;
+}
+#musicBar .slider .track {
+	-fx-background-color: transparent;
+}
+#musicBar ProgressBar .track {
+	-fx-background-color: #6E7075;
+}
+#musicBar ProgressBar .bar {
+	-fx-background-color: #45C8DC;
+}
+#musicBar Label {
+	-fx-text-fill: white;
+}
+#musicBar #playTimeLabel {
+	-fx-text-size: 0.8em;
+}
+#musicBar .slider .thumb {
+	-fx-background-color: transparent;
+}
+ToolBar {
+	-fx-background-color: #3F424A;
+}
+#playingIcon {
+	-fx-image: url(../img/play_bar_icon__white_16.png);
+}
+.separator .line {
+	-fx-border-width: 0;
+	-fx-border-color: transparent;
+	-fx-border-insets: 0;
+}
+ToolBar ColorPicker, ToolBar ComboBox {
+	-fx-background-color: transparent;
+	-fx-border-radius: 6px;
+	-fx-border-width: 1;
+	-fx-border-color: #45c8dc;
+}
+ToolBar CheckBox {
+	-fx-text-fill: #45C8DC;
+}
+ToolBar ToggleButton, ToolBar Button {
+	-fx-padding: 8px;
+}
+ToolBar ToggleButton:selected ImageView {
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+#tabPane .tab-container {
+	-fx-background-size: 36;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+#canvasTab .tab-container {
+	-fx-background-image: url(../img/tab_whiteboard_icon_64.png);
+}
+#canvasTab:selected .tab-container {
+	-fx-background-image: url(../img/tab_whiteboard_icon_active_64.png);
+}
+#fileTab .tab-container {
+	-fx-background-image: url(../img/tab_file_icon_64.png);
+}
+#fileTab:selected .tab-container {
+	-fx-background-image: url(../img/tab_file_icon_active_64.png);
+}
+#musicTab .tab-container {
+	-fx-background-image: url(../img/tab_music_icon_64.png);
+}
+#musicTab:selected .tab-container {
+	-fx-background-image: url(../img/tab_music_icon_active_64.png);
+}
+#imageTab .tab-container {
+	-fx-background-image: url(../img/tab_picture_icon_64.png);
+}
+#imageTab:selected .tab-container {
+	-fx-background-image: url(../img/tab_picture_icon_active_64.png);
+}
+.arrow-button .arrow {
+	-fx-background-color: #45c8dc;
+}
+#moveButton ImageView {
+	-fx-image: url(../img/move_icon_32.png);
+}
+#pencilButton ImageView {
+	-fx-image: url(../img/pencil_icon_32.png);
+}
+#brushButton ImageView {
+	-fx-image: url(../img/brush_icon_32.png);
+}
+#rectButton ImageView {
+	-fx-image: url(../img/rectangula_icon_32.png);
+}
+#ellipseButton ImageView {
+	-fx-image: url(../img/circle_icon_32.png);
+}
+#textButton ImageView {
+	-fx-image: url(../img/text.png);
+}
+#exitButton {
+	-fx-image: url(../img/exit_icon_64.png);
+}
+
+#captureButton ImageView {
+	-fx-image: url(../img/camera_icon_32.png);
+}
+#captureButton:pressed ImageView {
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+#undoButton {
+	-fx-background-color: transparent;
+	-fx-border-radius: 6px;
+	-fx-border-width: 1;
+	-fx-border-color: #45c8dc;
+}
+#undoButton:pressed {
+	-fx-background-color: #45c8dc;
+}
+#undoButton:pressed ImageView {
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+#undoButton ImageView {
+	-fx-image: url(../img/undo_icon_32.png);
+}
+#redoButton ImageView {
+	-fx-image: url(../img/redo.png);
+}
+#lineButton ImageView {
+	-fx-image: url(../img/line_icon_32.png);
+}
+
+#playButton {
+	-fx-image: url(../img/play_button_32.png);
+}
+#playButton.pause {
+	-fx-image: url(../img/stop_button_32.png);
+}
+#prevButton {
+	-fx-image: url(../img/backward_button_32.png);
+}
+#nextButton {
+	-fx-image: url(../img/forward_button_32.png);
+}
+#musicBar ImageView:pressed{
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+.add, #captureButton {
+	-fx-background-color: transparent;
+	-fx-border-radius: 6px;
+	-fx-border-width: 1;
+	-fx-border-color: #45c8dc;
+}
+.add:pressed, #captureButton:pressed {
+	-fx-background-color: #45c8dc;
+}
+.add ImageView {
+	-fx-image: url(../img/add_icon_32.png);
+}
+.add:pressed ImageView {
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+
+.remove {
+	-fx-background-color: transparent;
+	-fx-border-radius: 6px;
+	-fx-border-width: 1;
+	-fx-border-color: #45c8dc;
+}
+.remove:pressed {
+	-fx-background-color: #45c8dc;
+}
+.remove ImageView {
+	-fx-image: url(../img/delete_icon_32.png);
+}
+.remove:pressed ImageView {
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+
+.open {
+	-fx-background-color: transparent;
+	-fx-border-radius: 6px;
+	-fx-border-width: 1;
+	-fx-border-color: #45c8dc;
+}
+.open:pressed {
+	-fx-background-color: #45c8dc;
+}
+.open ImageView {
+	-fx-image: url(../img/folder_icon_32.png);
+}
+.open:pressed ImageView {
+	-fx-effect: innershadow( three-pass-box , white , 10, 1.0 , 0 , 0 );
+}
+#messageIcon {
+	-fx-image: url(../img/chatting_icon_16.png);
+}
+#canvasPane {
+	-fx-background-color : white;
+}
+#userListIcon {
+	-fx-image: url(../img/user_list_icon_64.png);
+}
+#userListPane {
+	-fx-background-color: #f0f0f0;
+}
+#userListPane #userListLabel {
+	-fx-font-size: 1.6em;
+}
+ListView {
+	-fx-focus-color: transparent;
+	-fx-border-color: #DADADA;
+	-fx-border-width: 1px;
+	
+}
+#userListView {
+	-fx-border-radius: 6px;
+}
+#userListView .list-cell:odd,
+#userListView .list-cell:even{
+	-fx-background-color: white;
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #ACE4EC;
+    -fx-text-fill: white;
+}
+
+.list-cell:even {
+    -fx-background-color: #FDFDFD;
+}
+.list-cell:odd {
+    -fx-background-color: #F8F8F8;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}
+
